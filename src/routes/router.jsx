@@ -1,5 +1,8 @@
 import { createHashRouter } from 'react-router-dom'
 import Root from './Root.jsx'
+import Landing from './Landing.jsx';
+import FriendList from './FriendList.jsx';
+import AddFriend from './AddFriend.jsx';
 
 const router = createHashRouter([
 	{
@@ -9,8 +12,24 @@ const router = createHashRouter([
 		// Så ska Root-komponenten renderas
 		element: <Root />,
 
+		// Lägg till ett element om du vill hantera felaktiga länkar
+		// errorElement: <ErrorPage />,
+
 		// Inuti Root ska vi klistra in den komponent vars route matchar URL bäst
-		// TODO
+		children: [
+			{
+				path: '/friends',
+				element: <FriendList />
+			},
+			{
+				path: '/add',
+				element: <AddFriend />
+			},
+			{
+				path: '/',
+				element: <Landing />
+			},
+		]
 	},
 	
 ]);
