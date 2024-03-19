@@ -1,0 +1,98 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: lightgray;
+	margin: 0;
+	padding: 0;
+	color: #581266;
+	background-color: #E1B7E9;
+}
+
+.italianno-regular {
+	font-family: "Italianno", cursive;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.app {
+	padding: 1em;
+}
+
+h1 {
+	margin: 0 0 0.2em 0;
+	font-family: "Italianno";
+	font-size: 2.6em;
+}
+
+nav {
+	display: flex;
+	gap: 0.6em;
+	margin-bottom: 0.5em;
+	padding: 0 0 0.3em 0;
+	box-shadow: 0 0.4em 0.5em -0.3em #A456BD;
+}
+
+nav a {
+	display: block;
+	padding: 0.3em 1.1em;
+	background-color: #C3AAEB;
+	border: 2px solid #C3AAEB;
+	border-radius: 0.4em;
+	/* 	margin: 0.2em; */
+	color: #411D7A;
+	transition: 0.3s all linear;
+}
+
+nav a:hover {
+	background-color: transparent;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.friend {
+	border: 1px solid black;
+	border-radius: 0.4em;
+	padding: 0.4em;
+	margin: 0.4em 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 1em;
+	grid-row-gap: 0.3em;
+}
+
+.friend> :nth-child(2) {
+	grid-row: 2;
+}
+
+button {
+	border-radius: 0.4em;
+	border: none;
+	background-color: #7B2D94;
+	color: #E3C4ED;
+	transition: 0.4s all;
+	padding: 0.4em 1.1em;
+	max-width: 10em;
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: #A540C6;
+}
+
+.form {
+	border: 1px solid black;
+	border-radius: 0.4em;
+	padding: 0.4em;
+	margin: 0.4em 0;
+	display: flex;
+	flex-direction: column;
+	gap: 1.4em;
+}
+
+input[type="text"] {
+	border-radius: 0.2em;
+	border: none;
+	padding: 0.3em 0.5em;
+}
