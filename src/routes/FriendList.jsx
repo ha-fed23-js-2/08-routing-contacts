@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 
 const FriendList = () => (
@@ -9,14 +10,16 @@ const FriendList = () => (
 		<div className="friend">
 			<div> Bosse Bengtsson </div>
 			<div> bosse@mail.com </div>
-			<button> Ändra </button> <button> Ta bort </button>
+			<Link to="/friends/1"> Ändra </Link>
+			<button> Ta bort </button>
 		</div>
 
 
 		<div className="friend">
 			<div> Bosse Bengtsson </div>
 			<div> bosse@mail.com </div>
-			<button> Ändra </button> <button> Ta bort </button>
+			<Link to="/friends/2"> Ändra </Link>
+			<button> Ta bort </button>
 		</div>
 
 		<div className="friend">

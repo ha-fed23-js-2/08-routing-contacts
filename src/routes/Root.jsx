@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom"
+import { Link, NavLink, Outlet } from "react-router-dom"
 
 // Router motsvarar App-komponenten
 // Består av en statisk del (visas alltid) och en dynamisk (Outlet ersätts av andra komponenter)
@@ -7,9 +7,9 @@ const Root = () => (
 		<header>
 			<h1> Mina vänner </h1>
 			<nav>
-				<Link to="/"> Start </Link>
-				<Link to="/friends"> Vänlista </Link>
-				<Link to="/add"> Ny vän </Link>
+				<NavLink to="/"> Start </NavLink>
+				<NavLink to="/friends"> Vänlista </NavLink>
+				<NavLink to="/add"> Ny vän </NavLink>
 			</nav>
 		</header>
 

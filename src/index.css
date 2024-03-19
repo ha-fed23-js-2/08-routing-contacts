@@ -96,3 +96,10 @@ input[type="text"] {
 	border: none;
 	padding: 0.3em 0.5em;
 }
+
+
+/* NavLink i react Router */
+a.active {
+	background-color: #06262c;
+	color: #eeeeee;
+}

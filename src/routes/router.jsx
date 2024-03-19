@@ -3,6 +3,7 @@ import Root from './Root.jsx'
 import Landing from './Landing.jsx';
 import FriendList from './FriendList.jsx';
 import AddFriend from './AddFriend.jsx';
+import EditFriend from './EditFriend.jsx';
 
 const router = createHashRouter([
 	{
@@ -20,6 +21,10 @@ const router = createHashRouter([
 			{
 				path: '/friends',
 				element: <FriendList />
+			},
+			{
+				path: '/friends/:id',
+				element: <EditFriend />
 			},
 			{
 				path: '/add',
