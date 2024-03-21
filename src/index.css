@@ -80,6 +80,9 @@ button:hover {
 	cursor: pointer;
 	background-color: #A540C6;
 }
+button:disabled {
+	background-color: rgb(133, 128, 134);
+}
 
 .form {
 	border: 1px solid black;
@@ -89,6 +92,10 @@ button:hover {
 	display: flex;
 	flex-direction: column;
 	gap: 1.4em;
+}
+
+label {
+	display: block;
 }
 
 input[type="text"] {
