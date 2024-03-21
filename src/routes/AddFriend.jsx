@@ -1,13 +1,23 @@
+import { useFriendStore } from "../data/store.js"
 
+const AddFriend = () => {
+	const { friends, newFriend } = useFriendStore(state => ({
+		friends: state.friends,
+		newFriend: state.newFriend
+	}))
+	// Alternativ:
+	// const friends = useFriendStore(state => state.friends)
+	// const newFriend = useFriendStore(state => state.newFriend)
 
-const AddFriend = () => (
-	<section className="form">
-		<div> <input type="text" defaultValue="Bosse Bengtsson" /> </div>
-		<div> <input type="text" defaultValue="bosse@mail.com" /> </div>
-		<button> Spara </button>
+	console.log('AddFriend friends = ', friends)
 
-	</section>
-
-)
+	return (
+		<section className="form">
+			<div> <input type="text" defaultValue="Bosse Bengtsson" /> </div>
+			<div> <input type="text" defaultValue="bosse@mail.com" /> </div>
+			<button> Spara </button>
+		</section>
+	)
+}
 
 export default AddFriend
