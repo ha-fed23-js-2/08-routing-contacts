@@ -14,7 +14,11 @@ const useFriendStore = create(set => ({
 				email: email
 			}
 		]  // state.friends
-	}))  // newFriend
+	})),  // newFriend
+
+	removeFriend: (id) => set(state => ({
+		friends: state.friends.filter(friend => friend.id !== id)
+	}))
 }))
 
 function generateId(friends) {

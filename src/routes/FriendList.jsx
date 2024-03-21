@@ -3,7 +3,10 @@ import { useFriendStore } from "../data/store.js"
 
 
 const FriendList = () => {
-	const friends = useFriendStore(state => state.friends)
+	const { friends, removeFriend } = useFriendStore(state => ({
+		friends: state.friends,
+		removeFriend: state.removeFriend
+	}))
 
 	return (
 		<>
@@ -16,7 +19,7 @@ const FriendList = () => {
 					<div> {friend.name} </div>
 					<div> {friend.email} </div>
 					<Link to={'/friends/' + friend.id}> Ändra </Link>
-					<button> Ta bort </button>
+					<button onClick={() => removeFriend(friend.id)}> Ta bort </button>
 				</div>
 			))}
 		</section>
