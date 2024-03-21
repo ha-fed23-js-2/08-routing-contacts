@@ -9,12 +9,25 @@ const useFriendStore = create(set => ({
 		friends: [
 			...state.friends,
 			{
-				// TODO: lägg till ett id
+				id: generateId(state.friends),
 				name: name,
 				email: email
 			}
 		]  // state.friends
 	}))  // newFriend
 }))
+
+function generateId(friends) {
+	// console.log('generateId friends:', friends);
+	let highest = 1
+	for( let i=0; i<friends.length; i++ ) {
+		// console.log('generateId inuti loopen', friends[i], highest);
+		if( friends[i].id > highest ) {
+			// console.log('generateId villkor', friends[i], highest);
+			highest = friends[i].id
+		}
+	}
+	return highest + 1
+}
 
 export { useFriendStore }

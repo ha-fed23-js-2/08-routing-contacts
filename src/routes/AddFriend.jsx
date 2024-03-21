@@ -23,7 +23,11 @@ const AddFriend = () => {
 		setEmail(event.target.value)
 	}
 
-	const doSaveFriend = () => newFriend(name, email)
+	const doSaveFriend = () => {
+		newFriend(name, email)
+		setName('')
+		setEmail('')
+	}
 
 
 	// ** Variabler och konstanter som stöd för JSX ** //
@@ -37,12 +41,14 @@ const AddFriend = () => {
 				<label> Namn </label>
 				<input type="text"
 					onChange={handleNameChange}
+					value={name}
 					/>
 			</div>
 			<div>
 				<label> E-post </label>
 				<input type="text"
 					onChange={handleEmailChange}
+					value={email}
 					/>
 			</div>
 			<button
