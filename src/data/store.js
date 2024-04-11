@@ -18,7 +18,19 @@ const useFriendStore = create(set => ({
 
 	removeFriend: (id) => set(state => ({
 		friends: state.friends.filter(friend => friend.id !== id)
-	}))
+	})),
+
+	editFriend: (id, name, email) => set(state => {
+		const friendsCopy = [ ...state.friends ]
+		const index = friendsCopy.findIndex(friend => friend.id === Number(id))
+		const changedFriend = { id, name, email }
+		friendsCopy[index] = changedFriend
+
+		// om man använder API: skicka "save" med friendsCopy till API:et
+		return {
+			friends: friendsCopy
+		}
+	})
 }))
 
 function generateId(friends) {

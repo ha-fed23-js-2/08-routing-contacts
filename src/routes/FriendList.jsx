@@ -18,7 +18,7 @@ const FriendList = () => {
 				<div key={friend.id} className="friend">
 					<div> {friend.name} </div>
 					<div> {friend.email} </div>
-					<Link to={'/friends/' + friend.id}> Ändra </Link>
+					<Link to={'/edit/' + friend.id}> Ändra </Link>
 					<button onClick={() => removeFriend(friend.id)}> Ta bort </button>
 				</div>
 			))}

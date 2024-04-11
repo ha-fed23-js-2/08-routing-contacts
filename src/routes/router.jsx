@@ -23,7 +23,7 @@ const router = createHashRouter([
 				element: <FriendList />
 			},
 			{
-				path: '/friends/:id',
+				path: '/edit/:id',
 				element: <EditFriend />
 			},
 			{
@@ -36,7 +36,7 @@ const router = createHashRouter([
 			},
 		]
 	},
-	
+
 ]);
 
 export { router }
