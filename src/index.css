@@ -18,6 +18,8 @@ body {
 
 .app {
 	padding: 1em;
+	max-width: 40rem;
+	margin:auto;
 }
 
 h1 {
@@ -57,7 +59,7 @@ nav a:hover {
 	padding: 0.4em;
 	margin: 0.4em 0;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 8em;
 	grid-column-gap: 1em;
 	grid-row-gap: 0.3em;
 }
@@ -66,7 +68,11 @@ nav a:hover {
 	grid-row: 2;
 }
 
-button {
+button, .friend a {
+	font-family: Arial, sans-serif;
+	text-align: center;
+	text-decoration: none;
+	font-size: 0.8rem;
 	border-radius: 0.4em;
 	border: none;
 	background-color: #7B2D94;
@@ -76,7 +82,7 @@ button {
 	max-width: 10em;
 }
 
-button:hover {
+button:hover, .friend a:hover {
 	cursor: pointer;
 	background-color: #A540C6;
 }
@@ -109,4 +115,11 @@ input[type="text"] {
 a.active {
 	background-color: #06262c;
 	color: #eeeeee;
+}
+
+/* Felmeddelande, ny vän och ändra vän */
+.form {
+	.error {
+		margin: 0;
+	}
 }

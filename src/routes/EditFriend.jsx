@@ -20,7 +20,7 @@ const EditFriend = () => {
 		// console.log('EditFriend: friend not found, friends=', friends);
 		return (
 			<section>
-				<p> Kunde inte hitta vännen!
+				<p className="error"> Kunde inte hitta vännen!
 					<Link to="/friends"> Gå till vänlistan </Link>
 					och försök igen. </p>
 			</section>
@@ -33,6 +33,8 @@ const EditFriend = () => {
 		// navigera användaren till vänlistan
 		navigate('/friends')
 	}
+
+	const canSaveFriend = !!(name && email)
 
 	return (
 		<section className="form">
@@ -48,8 +50,9 @@ const EditFriend = () => {
 					onChange={event => setEmail(event.target.value)}
 					/>
 			</div>
-			<button onClick={handleSave}> Spara </button>
+			<button disabled={!canSaveFriend} onClick={handleSave}> Spara </button>
 
+			{!canSaveFriend && <p className="error"> Fyll i båda fälten för att ändra vännens uppgifter. </p>}
 		</section>
 	)
 }

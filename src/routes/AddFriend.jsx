@@ -55,6 +55,8 @@ const AddFriend = () => {
 				onClick={doSaveFriend}
 				disabled={!canSaveFriend}
 				> Spara </button>
+
+			{!canSaveFriend && <p className="error"> Fyll i båda fälten för att lägga till din vän. </p>}
 		</section>
 	)
 }
